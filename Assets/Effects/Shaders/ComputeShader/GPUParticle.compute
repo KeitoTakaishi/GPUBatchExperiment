@@ -1,0 +1,19 @@
+﻿#pragma kernel Init
+#define THREAD_X 64
+#define THREAD_Y 1
+#define THREAD_Z 1
+#define THREAD [numthreads(64, 1, 1)]
+
+struct Parameters {
+	float3 pos;
+};
+
+
+RWStructuredBuffer<Parameters> parameters;
+
+THREAD
+void Init (uint2 id : SV_DispatchThreadID)
+{
+	uint idx = id.x;
+	parameters[idx].pos = float3(idx, 0.0, 0.0);
+}
