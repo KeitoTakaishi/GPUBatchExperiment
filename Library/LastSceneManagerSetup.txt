@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Instancing_Frag/Instancing_Frag.unity
+- path: Assets/Instancing_Surf/SimpleInstancing.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
